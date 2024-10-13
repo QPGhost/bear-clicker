@@ -1,0 +1,51 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кликер</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('https://baikal24.ru/public/images/upload/image1718104388446.jpg'); /* Замените на URL изображения медведя */
+            background-size: cover; /* Заставка на весь экран */
+            font-family: Arial, sans-serif;
+            color: white; /* Цвет текста, чтобы был виден на фоне */
+        }
+        h1 {
+            font-size: 40px;
+        }
+        .click-button {
+            width: 100px; /* Ширина кнопки */
+            height: 100px; /* Высота кнопки */
+            background: url('https://i.pinimg.com/originals/38/a2/e8/38a2e8a58fad66763e101917a9a7ab90.png') no-repeat center; /* Замените на URL изображения силуэта медведя */
+            background-size: contain; /* Масштабируем изображение, чтобы оно вписывалось в кнопку */
+            border: none; /* Убираем границы */
+            cursor: pointer; /* Курсор при наведении */
+        }
+        .score {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Тыкай медведя!</h1>
+    <button class="click-button" onclick="incrementScore()"></button>
+    <div class="score">Счет: <span id="score">0</span></div>
+
+    <script>
+        let score = 0; // Инициализация счетчика кликов
+
+        function incrementScore() {
+            score++; // Увеличение счета на 1
+            document.getElementById('score').innerText = score; // Обновление отображаемого счета
+        }
+    </script>
+
+</body>
+</html>
